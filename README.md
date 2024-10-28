@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SpaceX Data Management Application
 
-## Getting Started
+A Next.js application for managing SpaceX capsule data with local state management and advanced filtering capabilities.
 
-First, run the development server:
+## 🚀 Live Demo
 
+[View Live Demo](https://olamide-checkit-fe.vercel.app/dashboard)
+
+## 📹 Video Walkthrough
+
+[Watch Demo Video](https://drive.google.com/file/d/106VedPt_NGC3dfuox-fZ4qmIIY_VCPL_/view?usp=sharing)
+
+## ✨ Features
+
+### Data Management
+- Display SpaceX capsules data in a paginated table (5 items per page)
+- Add new capsules locally
+- Edit existing capsule information
+- View detailed capsule information in a modal
+- Advanced search and filtering capabilities
+
+### Search and Filter Functionality
+- Filter by multiple attributes:
+  - Status
+  - Original Launch Date
+  - Type
+- Real-time search results
+- Form validation for search parameters
+
+### Form Features
+- Add new capsules with validated form inputs
+- Edit existing capsule information
+- Form validation with error messages
+- Responsive form design
+
+## 🛠️ Technical Stack
+
+### Core Technologies
+- **Next.js** - React framework for production
+- **Formik** - Form management
+- **Yup** - Form validation
+- **Redux Toolkit** - State management
+- **ShadcnUI** - UI components
+- **Tailwind CSS** - Styling
+- **Tanstack Table** - Headless Table UI
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/YourUsername/YourName_CheckitFE.git
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Responsive Design
 
-## Learn More
+The application is fully responsive and tested on:
+- Desktop (1920px and above)
+- Tablet (768px to 1919px)
+- Mobile (320px to 767px)
 
-To learn more about Next.js, take a look at the following resources:
+## ⚡ Performance Optimizations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Implemented pagination for better data handling
+- Optimized search functionality with debouncing
+- Lazy loading of modals and forms
+- Image optimization using Next.js Image component
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 API Integration
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application integrates with the SpaceX API:
+- Endpoint: `https://api.spacexdata.com/v4/capsules`
+- Data is fetched and managed locally
+- All modifications are handled in local state
