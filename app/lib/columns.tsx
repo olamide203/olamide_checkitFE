@@ -12,7 +12,7 @@ export const columns: ColumnDef<Capsule>[] = [
       return (
         <Button
           variant="ghost"
-          className="rounded-0"
+          className="rounded-0 px-0"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Capsule ID
