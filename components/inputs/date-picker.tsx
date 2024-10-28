@@ -42,6 +42,9 @@ export function CustomDatePicker({
               "w-[240px] justify-start text-left font-normal",
               !date && "text-muted-foreground",
             )}
+            onClick={() => {
+              helpers.setTouched(true);
+            }}
             disabled={disabled}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />
@@ -63,9 +66,7 @@ export function CustomDatePicker({
       </Popover>
       <span
         className={`h-8 text-destructive text-sm ${
-          meta.touched && meta.error && meta.value === ""
-            ? "visible"
-            : "invisible"
+          meta.touched && meta.error === "" ? "visible" : "invisible"
         }`}
       >
         {meta.error}

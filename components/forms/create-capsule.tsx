@@ -51,11 +51,10 @@ export function CreateCapsuleForm({
     >
       {() => (
         <Form className="flex flex-row gap-3 flex-wrap">
-          <CustomInput
-            label="missions"
-            type="number"
-            name="missions"
-            placeholder="Enter number of missions"
+          <CustomDatePicker
+            label="Original Launch Date"
+            name="original_launch"
+            placeholder="dd/mm/yy"
           />
           <CustomSelect
             label="status"
@@ -69,10 +68,11 @@ export function CreateCapsuleForm({
             name="type"
             placeholder="select type"
           />
-          <CustomDatePicker
-            label="Original Launch Date"
-            name="original_launch"
-            placeholder="dd/mm/yy"
+          <CustomInput
+            label="missions"
+            type="number"
+            name="missions"
+            placeholder="Enter number of missions"
           />
 
           <div className="w-full flex items-end gap-4 flex-row">
