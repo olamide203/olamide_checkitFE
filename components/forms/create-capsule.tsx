@@ -38,11 +38,7 @@ export function CreateCapsuleForm({
   handleAction: (x: Values) => void;
   action: string;
 }) {
-  const nextID = useAppSelector((state) => state.capsules.nextID);
-  const handleSubmit = (
-    values: Values,
-    { setSubmitting }: FormikHelpers<Values>,
-  ) => {
+  const handleSubmit = (values: Values) => {
     console.log(typeof values.original_launch);
     handleAction(values);
     onFinish();
@@ -54,7 +50,7 @@ export function CreateCapsuleForm({
       validationSchema={createCapsuleSchema}
       onSubmit={handleSubmit}
     >
-      {(props) => (
+      {() => (
         <Form className="flex flex-row gap-3 flex-wrap">
           <CustomInput
             label="missions"

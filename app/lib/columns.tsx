@@ -36,6 +36,7 @@ export const columns: ColumnDef<Capsule>[] = [
         // Case-insensitive search
         return formattedDate.toLowerCase().includes(filterValue.toLowerCase());
       } catch (error) {
+        console.error(error);
         return false;
       }
     },
