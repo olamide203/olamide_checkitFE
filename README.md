@@ -84,8 +84,7 @@ The application is fully responsive and tested on:
 ## ⚡ Performance Optimizations
 
 - Implemented pagination for better data handling
-- Optimized search functionality with debouncing
-- Lazy loading of modals and forms
+- Optimized search functionality
 - Image optimization using Next.js Image component
 
 ## 🌐 API Integration
