@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="relative w-full">
+      <main className="relative w-full overflow-x-hidden">
         <AppNavbar />
         {children}
       </main>
