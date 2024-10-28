@@ -1,10 +1,9 @@
 import { CustomInput } from "@/components/inputs/custom-input";
 import { CustomSelect } from "@/components/inputs/custom-select";
 import { CustomDatePicker } from "../inputs/date-picker";
-import { Formik, Form, FormikHelpers } from "formik";
+import { Formik, Form } from "formik";
 import { createCapsuleSchema } from "@/app/schemas";
 import { Button } from "@/components/ui/button";
-import { useAppSelector } from "@/app/lib/store/hooks";
 
 const statusOptions = [
   { label: "Active", value: "active" },
