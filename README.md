@@ -54,7 +54,7 @@ A Next.js application for managing SpaceX capsule data with local state manageme
 
 1. Clone the repository
 ```bash
-git clone https://github.com/YourUsername/YourName_CheckitFE.git
+git clone https://github.com/olamide203/YourName_CheckitFE.git
 ```
 
 2. Install dependencies
