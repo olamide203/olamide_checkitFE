@@ -42,7 +42,9 @@ export function CreateDialog() {
           <Plus />
         </Button>
       </DialogTrigger>
-      <DialogContent className={`sm:max-w-lg h-[400px] ${inter.className}`}>
+      <DialogContent
+        className={`sm:max-w-lg h-[600px] sm:h-[400px] ${inter.className}`}
+      >
         <DialogHeader>
           <DialogTitle>Add new capsule</DialogTitle>
           <VisuallyHidden>

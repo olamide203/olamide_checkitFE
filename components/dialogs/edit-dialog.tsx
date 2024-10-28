@@ -48,7 +48,9 @@ export function EditDialog({ row }: { row: Row<Capsule> }) {
       <DialogTrigger asChild>
         <Button variant="outline">Edit</Button>
       </DialogTrigger>
-      <DialogContent className={`sm:max-w-lg h-[400px] ${inter.className}`}>
+      <DialogContent
+        className={`sm:max-w-lg h-[600] sm:h-[400px] ${inter.className}`}
+      >
         <DialogHeader>
           <DialogTitle>Edit capsule data</DialogTitle>
           <VisuallyHidden>
