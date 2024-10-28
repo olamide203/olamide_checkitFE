@@ -59,7 +59,38 @@ export const columns: ColumnDef<Capsule>[] = [
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: () => {
+      return <div className=" text-center">status</div>;
+    },
+    cell: ({ row }) => {
+      const status = row.original.status;
+      return (
+        <>
+          {status === "active" && (
+            <div className="rounded-full px-2 py-0.5 bg-chart-2/20 text-chart-2 text-center w-fit mx-auto">
+              {status}
+            </div>
+          )}
+          {status === "unknown" && (
+            <div className="rounded-full px-2 py-0.5 bg-ring/20 text-ring text-center w-fit mx-auto">
+              {status}
+            </div>
+          )}
+
+          {status === "retired" && (
+            <div className="rounded-full px-2 py-0.5 bg-chart-1/20 text-chart-1 text-center w-fit mx-auto">
+              {status}
+            </div>
+          )}
+
+          {status === "destroyed" && (
+            <div className="rounded-full px-2 py-0.5 bg-destructive/20 text-destructive text-center w-fit mx-auto ">
+              {status}
+            </div>
+          )}
+        </>
+      );
+    },
   },
   {
     accessorKey: "type",
