@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -8,7 +8,6 @@ import {
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
-  getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
 
@@ -27,7 +26,6 @@ import { DataTablePagination } from "./pagination";
 import { FilterDropdown } from "./filter-dropdown";
 import { CreateDialog } from "@/components/dialogs/create-dialog";
 import { useAppSelector } from "@/app/lib/store/hooks";
-import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

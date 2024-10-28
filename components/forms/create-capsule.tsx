@@ -4,8 +4,7 @@ import { CustomDatePicker } from "../inputs/date-picker";
 import { Formik, Form, FormikHelpers } from "formik";
 import { createCapsuleSchema } from "@/app/schemas";
 import { Button } from "@/components/ui/button";
-import { useAppDispatch, useAppSelector } from "@/app/lib/store/hooks";
-import { Capsule } from "@/app/lib/data";
+import { useAppSelector } from "@/app/lib/store/hooks";
 
 const statusOptions = [
   { label: "Active", value: "active" },

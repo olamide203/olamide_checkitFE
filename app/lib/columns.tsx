@@ -1,6 +1,5 @@
 import { ColumnDef } from "@tanstack/react-table";
 import type { Capsule } from "./data";
-import { Button } from "@/components/ui/button";
 import { EditDialog } from "@/components/dialogs/edit-dialog";
 import { DeleteDialog } from "@/components/dialogs/delete-dialog";
 

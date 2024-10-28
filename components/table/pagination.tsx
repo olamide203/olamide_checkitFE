@@ -8,7 +8,6 @@ import { Table } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
 import { useAppDispatch } from "@/app/lib/store/hooks";
 import { setPageIndex } from "@/app/lib/store/capsuleSlice";
-import { current } from "@reduxjs/toolkit";
 
 function generatePagination(currentIndex: number, lastIndex: number) {
   const pages = [];
