@@ -3,11 +3,13 @@
 import { useState } from "react";
 import {
   ColumnDef,
+  SortingState,
   ColumnFiltersState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
+  getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
 
@@ -39,6 +41,7 @@ export function DataTable<TData, TValue>({
   filterField,
 }: DataTableProps<TData, TValue>) {
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  const [sorting, setSorting] = useState<SortingState>([]);
   const pageIndex = useAppSelector((state) => state.capsules.pageIndex);
   const table = useReactTable({
     data,
@@ -47,7 +50,10 @@ export function DataTable<TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
+    onSortingChange: setSorting,
+    getSortedRowModel: getSortedRowModel(),
     state: {
+      sorting,
       columnFilters,
       pagination: {
         pageIndex: pageIndex, //initial page index

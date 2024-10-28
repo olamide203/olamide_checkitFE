@@ -2,11 +2,24 @@ import { ColumnDef } from "@tanstack/react-table";
 import type { Capsule } from "./data";
 import { EditDialog } from "@/components/dialogs/edit-dialog";
 import { DeleteDialog } from "@/components/dialogs/delete-dialog";
+import { Button } from "@/components/ui/button";
+import { ArrowUpDown } from "lucide-react";
 
 export const columns: ColumnDef<Capsule>[] = [
   {
     accessorKey: "capsule_serial",
-    header: "Capsule ID",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          className="rounded-0"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Capsule ID
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
   },
 
   {
